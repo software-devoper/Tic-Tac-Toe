@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: cadetblue;
+}
+.mainContainer{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+button{
+    height: 33.5%;
+    width: 32%;
+    border: 5px solid cyan;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 50px;
+    background: linear-gradient(to top,blue,cyan,red,yellow,black);
+    background-clip: text;
+    color: transparent;
+    cursor: pointer;
+
+}
+.hide{
+    display: none;
+}
+p{
+    font-size: 50px;
+    color: white;
+}
+#reset{
+    height: 40px;
+    width: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+    border: 2px solid red;
+}
+.resetButton{
+    height: 20vw;
+    width: 100vw;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bt{
+    border-top: none;
+}
+.bl{
+    border-left: none;
+}
+.br{
+    border-right: none;
+}
+.bb{
+    border-bottom: none;
+}
+#reset:hover{
+    background: linear-gradient(45deg,blue,cyan);
+    color: white;
+}
+@media only screen and (max-width : 667px) {
+    .container {
+        height: 67%;
+        width: 100%;
+    }
+    #reset{
+        height: 66px;
+        width: 172px;
+    }
+    .mainContainer{
+        height: 80vh;
+        width: 100vw;
+    }
+    p {
+        font-size: 25px;
+    }
+}
