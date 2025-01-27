@@ -29,11 +29,13 @@ buttons.forEach((item) => {
             item.innerText = 'X';
         }
         item.disabled = true;
+        item.style.color=rgb();
         c++;
-        let isWinner=checkWinner();
-        if(c==9&&!isWinner){
+        console.log(c);
+        let Winner=checkWinner();
+        console.log(Winner);
+        if(c===9&&!Winner){
             gameDraw();
-         
         }
     });
 });
@@ -46,6 +48,7 @@ let checkWinner = () => {
             if (pos1 === pos2 && pos2 === pos3) {
                 disableBoxes(pos1);
                 messageShown(pos1);
+                return true;
             }
         }
     }
@@ -74,4 +77,10 @@ let gameDraw=()=>{
     message.classList.remove('hide');
     message.innerText='Game Over';
     container.classList.add('hide');
+}
+let rgb=()=>{
+    color1=Math.ceil(Math.random()*255);
+    color2=Math.ceil(Math.random()*255);
+    color3=Math.ceil(Math.random()*255);
+    return `rgb(${color1},${color2},${color3})`;
 }
