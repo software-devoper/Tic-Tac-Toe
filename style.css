@@ -37,8 +37,12 @@ button{
     display: none;
 }
 p{
-    font-size: 50px;
-    color: white;
+    font-size: 60px;
+    background: linear-gradient(45deg,blue,cyan,red);
+    background-clip: text;
+    background-size: 300%;
+    color: transparent;
+    animation: change 3s linear infinite;
 }
 #reset{
     height: 40px;
@@ -51,8 +55,12 @@ p{
     font-size: larger;
     border: 2px solid red;
 }
+#reset:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s linear;
+}
 .resetButton{
-    height: 20vw;
+    height: 5vw;
     width: 100vw;
     margin-top: 5px;
     display: flex;
@@ -74,6 +82,15 @@ p{
 #reset:hover{
     background: linear-gradient(45deg,blue,cyan);
     color: white;
+}
+@keyframes change {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  100% {
+      background-position: 100% 50%;
+  }
 }
 @media only screen and (max-width : 667px) {
     .container {
