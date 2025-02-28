@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color: cadetblue;
+    background-color: rgb(22, 22, 22);
 }
 .mainContainer{
     height: 80vh;
@@ -25,24 +25,41 @@ button{
     width: 32%;
     border: 5px solid cyan;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 50px;
-    background: linear-gradient(to top,blue,cyan,red,yellow,black);
+    background: linear-gradient(to top,blue,red);
     background-clip: text;
     color: transparent;
     cursor: pointer;
-
+    perspective: 200px;
+   animation: rotate 5s ease ;
 }
 .hide{
     display: none;
 }
 p{
     font-size: 60px;
-    background: linear-gradient(45deg,blue,cyan,red);
+    background: linear-gradient(45deg,blue,cyan,red,yellow,green,pink);
     background-clip: text;
     background-size: 300%;
     color: transparent;
-    animation: change 3s linear infinite;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    animation: change 4s linear infinite;
+}
+
+@keyframes change {
+    0% {
+        background-position: 0% 50%;
+        text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    }
+    50% {
+        background-position: 100% 50%;
+        text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    }
+    100% {
+        background-position: 0% 50%;
+        text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    }
 }
 #reset{
     height: 40px;
@@ -53,11 +70,12 @@ p{
     border-radius: 5px;
     cursor: pointer;
     font-size: larger;
-    border: 2px solid red;
+    background-color:cyan;
 }
 #reset:hover{
     transform: scale(1.1);
     transition: transform 0.3s linear;
+    box-shadow: 0px 0px 10px cyan,0px 0px 20px cyan,0px 0px 40px cyan,0px 0px 80px cyan,0px 0px 160px cyan;
 }
 .resetButton{
     height: 5vw;
@@ -67,6 +85,7 @@ p{
     justify-content: center;
     align-items: center;
 }
+
 .bt{
     border-top: none;
 }
@@ -79,11 +98,11 @@ p{
 .bb{
     border-bottom: none;
 }
-#reset:hover{
+/* #reset:hover{
     background: linear-gradient(45deg,blue,cyan);
     color: white;
-}
-@keyframes change {
+} */
+/* @keyframes change {
   0% {
       background-position: 0% 50%;
   }
@@ -91,7 +110,7 @@ p{
   100% {
       background-position: 100% 50%;
   }
-}
+} */
 @media only screen and (max-width : 667px) {
     .container {
         height: 67%;
@@ -107,5 +126,19 @@ p{
     }
     p {
         font-size: 25px;
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
     }
 }
