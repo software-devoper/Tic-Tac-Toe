@@ -24,12 +24,13 @@ buttons.forEach((item) => {
         if (playerO) {
             playerO = false;
             item.innerText = 'O';
+            item.style.color='red';
         } else {
             playerO = true;
             item.innerText = 'X';
+            item.style.color='yellow';
         }
         item.disabled = true;
-        item.style.color=rgb();
         c++;
         console.log(c);
         let Winner=checkWinner();
